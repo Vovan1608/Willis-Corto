@@ -1,0 +1,145 @@
+@import "variables";
+
+@mixin h2 {
+    color: $clr-h2;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin: 0 0 0.5625em 0;
+}
+
+@mixin container {
+    padding: 4em 0 2em 0;
+    margin: 0 auto;
+    width: 45em;
+}
+
+@mixin h3 {
+    font-size: 1.75em;
+    line-height: 1.5em;
+    color: #777;
+    font-weight: 700;
+    margin: 0 0 0.5625em 0;
+}
+
+@mixin icons {
+    background: #4acaa8;
+    border-radius: 100%;
+    color: #ffffff;
+    display: block;
+    height: 2.5em;
+    left: 0;
+    line-height: 2.5em;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 2.5em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    text-transform: none !important;
+}
+
+@mixin inner {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+
+@mixin h4 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+    color: #777;
+    font-weight: 700;
+    margin: 0 0 0.5625em 0;
+}
+
+@mixin image {
+    display: inline-block;
+    padding-right: 2.5em;
+    vertical-align: middle;
+    width: 42%;
+    border-radius: 5px;
+    border: 0;
+}
+
+@mixin  img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+@mixin input {
+    height: 2.75em;
+    border-radius: 5px;
+    border: solid 2px #e4e4e4;
+    display: block;
+    padding: 0 1em;
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.75em;
+    font-weight: 400;
+    line-height: 1.75em;
+}
+
+@mixin submit {
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    height: 2.75em;
+    line-height: 2.75em;
+    padding: 0 1.5em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 13pt;
+}
+
+@mixin h1 {
+    font-size: 1.75em;
+    margin: 0;
+    color: $fnt-rgh-clr;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+@mixin a {
+    text-decoration: none;
+    color: $fnt-rgh-clr;
+    text-align: center;
+    display: block;
+
+    &:hover{
+        background-color: $fnt-rgh-clr;
+        color: $clr-h2;
+    }
+}
+
+@mixin navs-classes {
+    border-top: solid 2px #5ccfb1;
+    display: block;
+    padding: 0;
+}
+
+@mixin a-social {
+    border: 0;
+    text-decoration: none;
+    position: relative;
+}
+
+@mixin social-icons {
+    font-family: 'Font Awesome 5 Brands', 'Font Awesome 5 Free';
+    line-height: inherit;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    text-transform: none;
+    font-weight: 400;
+    color: #b7eadc;
+    font-size: 1.25em;
+}

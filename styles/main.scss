@@ -1,0 +1,626 @@
+@import "variables";
+@import "mixins";
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: $fnt-sze;
+    color: $common-clr;
+    font-family: $family;
+    font-weight: $weight;
+    line-height: $line-hght;
+    background: $common-bg_clr;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.left{
+    width: 73%;
+    min-height: $min-hgt;
+}
+
+.main-image{
+    height: 20em;
+    position: relative;
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+
+.left-banner{
+    @include container;
+
+    .first-child{
+        @include h2;
+    }
+
+    .second-child{
+        color: #777;
+        font-size: 1.75em;
+        font-weight: 700;
+        margin-top: -0.75em;
+        line-height: 1.5em;
+        margin: 0 0 1.6875em 0;
+
+        a{
+            text-decoration: none;
+            border-bottom: solid 1px #e4e4e4;
+            font-size: 30px;
+            color: #777;
+            cursor: pointer;
+
+            &:hover{
+                border-bottom: none;
+                color: $clr-h2;
+            }
+        }
+    }
+
+    .third-child{
+        margin: 0 0 2.25em 0;
+    }
+}
+
+.left-icons{
+    border-top: $brdr-top-cntr;
+
+    .container{
+        @include container;
+
+        h3{
+            @include h3;
+        }
+
+        p{
+            margin: 0 0 2.25em 0;
+        }
+
+        ul{
+            list-style: none;
+            padding-left: 0;
+            margin: 0 0 2.25em 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            li{
+                text-decoration: none;
+                display: inline-block;
+                margin: 0 0 1.6875em 0;
+                padding: 0.35em 0 0 3.5em;
+                position: relative;
+                vertical-align: top;
+                width: 42%;
+            }
+
+            .nth-1{
+
+                &::before{
+                    @include icons;
+                    content: $nth-1;
+                }
+            }
+
+            .nth-2{
+
+                &::before{
+                    @include icons;
+                    content: $nth-2;
+                }
+            }
+
+            .nth-3{
+
+                &::before{
+                    @include icons;
+                    content: $nth-3;
+                }
+            }
+
+            .nth-4{
+
+                &::before{
+                    @include icons;
+                    content: $nth-4;
+                }
+            }
+
+            .nth-5{
+
+                &::before{
+                    @include icons;
+                    content: $nth-5;
+                }
+            }
+
+            .nth-6{
+
+                &::before{
+                    @include icons;
+                    content: $nth-6;
+                }
+            }
+        }
+    }
+}
+
+.left-pictures{
+    border-top: $brdr-top-cntr;
+
+    .container{
+        @include container;
+    
+        h3{
+            @include h3;
+        }
+
+        p{
+            margin:0 0 2.25em 0;
+        }
+
+        .feachers{
+
+            .first{
+                border-top: 0;
+                padding-top: 0;
+                margin-bottom: 2.25em;
+
+                .image{
+                    @include image;
+
+                    .one{
+                        @include img;
+                    }
+                }
+
+                .inner{
+                    @include inner;
+
+                    h4{
+                        @include h4;
+                    }
+
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+
+            .second{
+                border-top: solid 3px #f4f4f4;
+                margin-bottom: 2.25em;
+                padding-top: 2.25em;
+
+                .image{
+                    @include image;
+
+                    .two{
+                        @include img;
+                    }
+                }
+
+                .inner{
+                    @include inner;
+
+                    h4{
+                        @include h4;
+                    }
+
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+
+            .therd{
+                border-top: solid 3px #f4f4f4;
+                margin-bottom: 2.25em;
+                padding-top: 2.25em;
+
+                .image{
+                    @include image;
+
+                    .three{
+                        @include img;
+                    }
+                }
+
+                .inner{
+                    @include inner;
+
+                    h4{
+                        @include h4;
+                    }
+
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.left-contact{
+    border-top: $brdr-top-cntr;
+
+    .container{
+        @include container;
+
+        h3{
+            @include h3;
+        }
+
+        p{
+            margin: 0 0 2.25em 0;
+        }
+
+        form{
+            margin: 0 0 2.25em 0;
+
+            .wrap{
+                margin-top: -2em;
+                margin-left: -2em;
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                align-items: stretch;
+
+                .name{
+                    padding: 2em 0 0 2em;
+                    width: 40%;
+
+                    input{
+                        @include input;
+
+                        &:focus{
+                            border-color: $clr-h2;
+                        }
+                    }
+                }
+
+                .email{
+                    padding: 2em 0 0 3em;
+                    width: 40%;
+
+                    input{
+                        @include input;
+
+                        &:focus{
+                            border-color: $clr-h2;
+                        }
+                    }
+                }
+
+                .subject{
+                    padding: 2em 0 0 2em;
+                    width: 86.5%;
+
+                    input{
+                        @include input;
+
+                        &:focus{
+                            border-color: $clr-h2;
+                        }
+                    }
+                }
+
+                .message{
+                    padding: 2em 0 0 2em;
+                    width: 86%;
+
+                    textarea{
+                        padding: 0.75em 1em;
+                        border-radius: 5px;
+                        border: solid 2px #e4e4e4;
+                        display: block;
+                        font-family: "Lato", sans-serif;
+                        font-weight: 400;
+                        line-height: 1.75em;
+                        width: 100%;
+
+                        &:focus{
+                            border-color: $clr-h2;
+                        }
+                    }
+                }
+
+                .button{
+                    padding: 2em 0 0 2em;
+                    display: flex;
+
+                    input[type="submit"]{
+                        background-color: $clr-h2;
+                        @include submit;
+
+                        &:hover{
+                            background-color: #5ed0b1;
+                        }
+                    }
+
+                    input[type="reset"]{
+                        background-color: #989898;
+                        @include submit;
+                        margin-left: 1em;
+
+                        &:hover{
+                            background-color: #a5a5a5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    padding: 1em 0 1em 0;
+    background: #fafafa;
+
+    .container{
+        @include container;
+        display: flex;
+        line-height: 1em;
+
+        .one{
+            border-left: 0;
+            margin-left: 0;
+            padding-left: 0;
+            font-size: 0.8em;        
+        }
+
+        .two{
+            border-left: solid 1px #d4d4d4;
+            font-size: 0.8em;
+            margin-left: 1em;
+            padding-left: 1em;
+
+            a{
+                text-decoration: none;
+                border-bottom: solid 1px #e4e4e4;
+                color: inherit;
+
+                &:hover{
+                    color: $clr-h2;
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .three{
+            border-left: solid 1px #d4d4d4;
+            font-size: 0.8em;
+            margin-left: 1em;
+            padding-left: 1em;
+
+            a{
+                text-decoration: none;
+                border-bottom: solid 1px #e4e4e4;
+                color: inherit;
+
+                &:hover{
+                    color: $clr-h2;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+.right{
+    width: 27%;
+    min-height: $min-hgt;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: $clr-h2;
+    height: 100%;
+
+    header{
+        padding: 2em;
+        text-align: center;
+    
+        .logo{
+            display: block;
+            margin: 0 auto 2.25em auto;
+            width: 8em;
+            border-radius: 100%;
+            overflow: hidden;
+    
+            img{
+                border-radius: 100%;
+                display: block;
+                width: 100%;
+            }
+        }
+    
+        h1{
+            @include h1;
+
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+            
+        }
+    
+        p{
+            color: #d2f2e9;
+            font-style: italic;
+            margin: 1em 0 0 0;
+        }
+    }
+    
+    nav{    
+        .one{
+            border-top: 0;  
+            
+            a{
+                @include a;
+            }
+        }
+    
+        .two{
+            @include navs-classes;
+    
+            a{
+                @include a;
+            }
+        }
+    
+        .three{
+            @include navs-classes;
+    
+            a{
+                @include a;
+            }
+        }
+    
+        .four{
+            @include navs-classes;
+    
+            a{
+                @include a;
+            }
+        }
+    
+        
+    }
+
+    footer{
+        padding: 1.5em;
+        width: 85%;
+        background-color: $clr-h2;
+
+        .icons{
+            cursor: default;
+            list-style: none;
+            margin: 0 0 0 4em;
+            display: block;
+            // margin: 0 auto;
+
+
+            .twitter{
+                display: inline-block;
+                padding: 0 1em 0 0;
+
+                a{
+                    @include a-social;
+                    
+                    span{
+                        
+                        &::before{
+                            @include social-icons;
+                            content: $icon-1;
+                        }
+
+                        &:hover::before{
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+
+            .facebook{
+
+                display: inline-block;
+                padding: 0 1em 0 0;
+
+                a{
+                    @include a-social;
+                    
+                    span{
+                        
+                        &::before{
+                            @include social-icons;
+                            content: $icon-2;
+                        }
+
+                        &:hover::before{
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+
+            .github{
+                display: inline-block;
+                padding: 0 1em 0 0;
+
+                a{
+                    @include a-social;
+                    
+                    span{
+                        
+                        &::before{
+                            @include social-icons;
+                            content: $icon-3;
+                        }
+
+                        &:hover::before{
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+
+            .instagram{
+                display: inline-block;
+                padding: 0 1em 0 0;
+
+                a{
+                    @include a-social;
+                    
+                    span{
+                        
+                        &::before{
+                            @include social-icons;
+                            content: $icon-4;
+                        }
+
+                        &:hover::before{
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+
+            .post{
+                display: inline-block;
+                padding: 0 1em 0 0;
+
+                a{
+                    @include a-social;
+                    
+                    span{
+                        
+                        &::before{
+                            @include social-icons;
+                            content: $icon-5;
+                        }
+
+                        &:hover::before{
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
